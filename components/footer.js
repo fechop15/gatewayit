@@ -1,5 +1,5 @@
-import { EXAMPLE_PATH } from '../../lib/constants'
-import Container from "../atoms/container";
+import Container from './container'
+import { EXAMPLE_PATH } from '../lib/constants'
 
 export default function Footer() {
   return (

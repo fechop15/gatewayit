@@ -39,6 +39,8 @@ Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packag
 npx create-next-app --example cms-contentful cms-contentful-app
 # or
 yarn create next-app --example cms-contentful cms-contentful-app
+# or
+pnpm create next-app -- --example cms-contentful cms-contentful-app
 ```
 
 ## Configuration
@@ -66,7 +68,7 @@ Next, go to **Settings > API > Content management tokens** and create a new toke
 With the space ID and management access token at hand run the following command:
 
 ```
-npx cross-env CONTENTFUL_SPACE_ID=ye3u13zenyse CONTENTFUL_MANAGEMENT_TOKEN=CFPAT-nV-RTFeXqHnyKbvUbd_TD__jGP4OVcY9yp18KxI25LY npm run setup
+npx cross-env CONTENTFUL_SPACE_ID=YOUR_SPACE_ID CONTENTFUL_MANAGEMENT_TOKEN=XXX npm run setup
 ```
 
 This command will create the needed content structures and set up your Contentful space ready to use. The output should look as follows:
