@@ -1,18 +1,18 @@
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import ErrorPage from 'next/error'
-import Container from '../../components/container'
-import PostBody from '../../components/post-body'
-import MoreStories from '../../components/more-stories'
-import Header from '../../components/header'
-import PostHeader from '../../components/post-header'
-import SectionSeparator from '../../components/section-separator'
-import Layout from '../../components/layout'
-import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
-import PostTitle from '../../components/post-title'
+import {getAllPagesWithSlug, getAllPostsWithSlug, getPostAndMorePosts} from '../../lib/api'
 import { CMS_NAME } from '../../lib/constants'
+import Container from "../../components/atoms/container";
+import Header from "../../components/organisms/header";
+import PostTitle from "../../components/atoms/post-title";
+import PostHeader from "../../components/organisms/post-header";
+import PostBody from "../../components/organisms/post-body";
+import SectionSeparator from "../../components/atoms/section-separator";
+import MoreStories from "../../components/organisms/more-stories";
+import Layout from "../../components/template/layout";
 
-export default function Post({ post, morePosts, preview }) {
+export default function Post({ post, morePosts, preview,allPages }) {
   const router = useRouter()
 
   if (!router.isFallback && !post) {
@@ -20,7 +20,7 @@ export default function Post({ post, morePosts, preview }) {
   }
 
   return (
-    <Layout preview={preview}>
+    <Layout preview={preview} pages={allPages}>
       <Container>
         <Header />
         {router.isFallback ? (
@@ -55,11 +55,13 @@ export default function Post({ post, morePosts, preview }) {
 
 export async function getStaticProps({ params, preview = false }) {
   const data = await getPostAndMorePosts(params.slug, preview)
+  const allPages = await getAllPagesWithSlug()
 
   return {
     props: {
       preview,
       post: data?.post ?? null,
+      allPages: allPages ?? null,
       morePosts: data?.morePosts ?? null,
     },
   }
