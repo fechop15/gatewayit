@@ -3,12 +3,16 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         'accent-1': '#FAFAFA',
-        'accent-2': '#EAEAEA',
-        'accent-7': '#333',
+        'accent-2': '#F2F2F2',
+        'accent-7': '#262122',
+        'accent-blue': '#0B9ED9',
+        'accent-red': '#D92332',
+        'accent-green': '#03A64A',
         success: '#0070f3',
         cyan: '#79FFE1',
       },

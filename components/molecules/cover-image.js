@@ -1,4 +1,4 @@
-import ContentfulImage from './contentful-image'
+import ContentfulImage from '../atoms/contentful-image'
 import Link from 'next/link'
 import cn from 'classnames'
 

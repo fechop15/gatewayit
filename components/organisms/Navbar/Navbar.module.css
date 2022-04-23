@@ -1,0 +1,23 @@
+.navbar {
+    @apply hidden md:flex flex-row items-center justify-between px-8 h-16 rounded-b-3xl bg-white z-50 fixed top-0 w-full bg-accent-7 dark:bg-accent-2;
+}
+
+.logo {
+    @apply text-5xl text-gray-800 -mb-1 w-44;
+}
+
+.navItems {
+    @apply flex flex-row self-end h-12;
+}
+
+.navItem {
+    @apply w-20 text-gray-400 hover:text-white cursor-pointer font-medium tracking-wide text-base flex items-start justify-center;
+}
+
+.selectedNavItem {
+    @apply text-white bg-accent-7 dark:bg-accent-2;
+}
+
+.actions {
+    @apply bg-white hover:bg-gray-50 border-2 border-gray-900 text-sm text-gray-900 py-3 px-5 rounded-lg font-medium tracking-wide leading-none;
+}

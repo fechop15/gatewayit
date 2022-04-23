@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import Avatar from '../components/avatar'
-import DateComponent from '../components/date'
-import CoverImage from '../components/cover-image'
+import Avatar from '../molecules/avatar'
+import DateComponent from '../atoms/date'
+import CoverImage from '../molecules/cover-image'
 
 export default function HeroPost({
   title,
