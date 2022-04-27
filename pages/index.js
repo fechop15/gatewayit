@@ -14,7 +14,6 @@ import useNavigation from "../hooks/useNavigation";
 export default function Index({ preview, allPosts }) {
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(1)
-  const { currentRoute, setCurrentRoute } = useNavigation();
 
   return (
     <>
@@ -23,17 +22,6 @@ export default function Index({ preview, allPosts }) {
           <title>Next.js Blog Example with {CMS_NAME}</title>
           <link rel='manifest' href='/manifest.json' />
         </Head>
-        <Navbar
-          navigationData={ITEM_MENU}
-          currentRoute={currentRoute}
-          setCurrentRoute={setCurrentRoute}
-      />
-        <Tabbar
-            navigationData={ITEM_MENU}
-            currentRoute={currentRoute}
-            setCurrentRoute={setCurrentRoute}
-        />
-
         <Container>
           <Intro />
           {heroPost && (

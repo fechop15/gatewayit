@@ -4,6 +4,7 @@
 
 .tabItem {
     @apply text-gray-400 hover:text-gray-700 cursor-pointer h-full flex items-center justify-center;
+    width: 50px;
 }
 
 .tabItemActive {

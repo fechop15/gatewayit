@@ -14,7 +14,6 @@ export default function Offline() {
         <Layout>
             <Head>
                 <title>Next.js Blog Example with {CMS_NAME}</title>
-                <link rel='manifest' href='/manifest.json'/>
             </Head>
             <Navbar
                 navigationData={ITEM_MENU}
